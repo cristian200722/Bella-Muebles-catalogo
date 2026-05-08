@@ -12,43 +12,72 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+     transition:0.2s ease;
 }
 
 /* ===== BODY ===== */
 
 body{
     font-family:'Poppins', sans-serif;
-    background:var(--gris);
+   background:#f8f9fa;
     color:var(--azul);
     line-height:1.5;
+    scroll-behavior:smooth;
 }
 
 /* ===== HEADER ===== */
 
 header{
-    background:var(--azul);
+   background:var(--azul);
     color:var(--blanco);
-    padding:20px;
+    padding:10px;
     text-align:center;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1{
-    font-size:2rem;
-    font-weight:600;
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    font-weight:700;
+    color:var(--blanco);
+
+    text-shadow:0 4px 15px rgba(0,0,0,0.2);
+
+    line-height:1;
+}
+header h1:hover{
+    transform:scale(1.03);
+}
+.linea{
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--naranja),
+        transparent
+    );
+
+    margin-top:10px;
+    border-radius:10px;
 }
 
 /* ===== BANNER ===== */
 
 .banner{
-    background:var(--turquesa);
+    background:linear-gradient(
+        to bottom,
+        var(--azul),
+        var(--turquesa)
+    );
     color:var(--blanco);
-    padding:60px 20px;
+  padding:15px 25px 20px;
     text-align:center;
 }
 
 .banner h2{
-    font-size:2rem;
+    font-size:1.7rem;
     font-weight:500;
 }
 
@@ -61,7 +90,7 @@ section{
 /* ===== CATEGORÍAS ===== */
 
 .categories{
-    padding:20px;
+      padding:25px 20px 0;
     text-align:center;
 }
 
@@ -81,13 +110,15 @@ section{
 .botones-categorias button{
     background:var(--blanco);
     color:var(--azul);
-    border:2px solid var(--turquesa);
+   border:none;
     padding:12px 25px;
     border-radius:30px;
     font-size:1rem;
     font-weight:500;
     cursor:pointer;
     transition:0.3s;
+    background:var(--blanco);
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 .botones-categorias button:hover{
@@ -103,7 +134,8 @@ section{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
     padding:20px;
-    margin-top:40px;
+    margin-top:5px;
+    
 }
 
 /* ===== CARD ===== */
@@ -117,8 +149,21 @@ section{
     padding-bottom:20px;
     transition:0.3s;
     cursor:pointer;
-
+  animation:aparecer 0.6s ease;
    
+}
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 .card:hover{
@@ -172,10 +217,14 @@ a{
 
 @media(max-width:768px){
 
-    header h1{
-        font-size:1.5rem;
-    }
+header h1{
+    font-size:2.5rem;
+}
 
+.logo-header{
+    width:70px;
+    height:70px;
+}
     .banner{
         padding:40px 15px;
     }
@@ -205,4 +254,79 @@ a{
         width:80%;
     }
 
+}
+.info-producto{
+  display:none;
+    padding:20px;
+    text-align:left;
+    border-top:1px solid #e0e0e0;
+    margin-top:15px;
+     background:#fafafa;
+    border-radius:10px;
+}
+.info-producto p{
+    margin-bottom:12px;
+    font-size:0.95rem;
+    color:#444;
+    line-height:1.6;
+}
+.info-producto strong{
+    color:var(--azul);
+}
+.ver-mas{
+    background:var(--naranja);
+    color:var(--blanco);
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+.ver-mas:hover{
+    background:var(--azul);
+}
+/* ===== WHATSAPP ===== */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    transition:0.3s;
+    z-index:1000;
+}
+.whatsapp:hover{
+    transform:scale(1.1);
+    background:#1ebe5d;
+}
+.logo-titulo{
+   display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.logo-header{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:50%;
+
+    border:3px solid rgba(255,255,255,0.2);
+}
+.banner p{
+    margin-top:15px;
+    font-size:1.1rem;
+    opacity:0.9;
 }
