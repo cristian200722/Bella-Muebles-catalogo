@@ -1,17 +1,15 @@
 const botones = document.querySelectorAll(".ver-mas");
 
-botones.forEach(boton => {
+botones.forEach(boton=>{
+    boton.addEventListener("click",()=>{
+        const card = boton.closest(".card");
+        const info = card.querySelector(".info-producto");
 
-    boton.addEventListener("click", () => {
+        if(!info) return;
 
-        const info = boton.nextElementSibling;
-
-        if(info.style.display === "block"){
-            info.style.display = "none";
-        } else {
-            info.style.display = "block";
-        }
-
+        info.style.display =
+        info.style.display==="block"
+        ? "none"
+        : "block";
     });
-
 });
