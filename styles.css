@@ -424,25 +424,26 @@ header h1{
     display:flex;
     flex-wrap:nowrap;
     overflow-x:auto;
-    justify-content:center;
+    justify-content:flex-start;
+
     gap:4px;
     padding:3px 10px;
-    margin:0 auto;
-    scrollbar-width:none;
+
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
-.botones-categorias::-webkit-scrollbar{
-    display:none;
-}
-
+/* centra cada botón como “snap” */
 .botones-categorias button{
     flex:0 0 auto;
+    scroll-snap-align:center;
+
     min-width:auto;
-    padding:6px 10px;
-    font-size:0.8rem;
-    border-radius:20px;
+    padding:3px 8px;
+    font-size:0.65rem;
+    border-radius:12px;
+
     white-space:nowrap;
-    box-shadow:0 3px 8px rgba(0,0,0,0.08);
 }
 
 .categories h2{
