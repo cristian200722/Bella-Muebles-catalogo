@@ -412,42 +412,49 @@ header h1{
 }
 
 /* ===== CATEGORÍAS (FIX IMPORTANTE) ===== */
+@media(max-width:768px){
+
 .categories{
-    padding:10px 10px 0;
+    padding:8px 10px 0;
 }
 
 .categories h2{
-    font-size:1.6rem;
-    margin-bottom:15px;
+    font-size:1.5rem;
+    margin-bottom:12px;
 }
 
+/* 🔥 barra horizontal limpia */
 .botones-categorias{
     display:flex;
     flex-wrap:nowrap;
     overflow-x:auto;
     justify-content:flex-start;
-    gap:10px;
-    padding:5px 10px;
-    -webkit-overflow-scrolling: touch;
+    gap:8px;
+    padding:5px 8px;
+    scrollbar-width:none; /* Firefox */
 }
 
+.botones-categorias::-webkit-scrollbar{
+    display:none; /* Chrome */
+}
+
+/* 🔥 botones pequeños tipo filtro */
 .botones-categorias button{
     flex:0 0 auto;
     min-width:auto;
-    padding:8px 14px;
-    font-size:0.85rem;
-    border-radius:20px;
+    padding:6px 12px;
+    font-size:0.8rem;
+    border-radius:18px;
     white-space:nowrap;
+    box-shadow:0 3px 8px rgba(0,0,0,0.08);
 }
 
-/* ===== BOTONES CATEGORÍAS (RESET TUYO) ===== */
-.botones-categorias button{
-    width:auto;
-    min-width:auto;
-    padding:10px 14px;
-    font-size:0.9rem;
+/* 🔥 iconos más pequeños */
+.botones-categorias i{
+    font-size:1rem;
 }
 
+}
 }
 
 /* ===== BOTÓN WHATSAPP ===== */
