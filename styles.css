@@ -379,6 +379,8 @@ section{
     background:var(--azul);
 }
 
+/* ===== RESPONSIVE ===== */
+
 @media(max-width:768px){
 
 header h1{
@@ -397,12 +399,10 @@ header h1{
     font-size:1rem;
 }
 
-/* ===== PRODUCTOS ===== */
 .productos{
-    padding:10px;
+    padding:15px;
 }
 
-/* ===== CARD ===== */
 .card img{
     height:250px;
 }
@@ -410,50 +410,45 @@ header h1{
 .card h3{
     font-size:1rem;
 }
-
-/* ===== CATEGORÍAS (FIX IMPORTANTE) ===== */
-@media(max-width:768px){
-
 .categories{
-    padding:8px 10px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:var(--blanco);
+    padding:8px 5px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.categories h2{
-    font-size:1.5rem;
-    margin-bottom:12px;
-}
-
-/* 🔥 barra horizontal limpia */
+/* 🔥 FIX CATEGORÍAS MOBILE */
 .botones-categorias{
     display:flex;
     flex-wrap:nowrap;
     overflow-x:auto;
     justify-content:flex-start;
     gap:8px;
-    padding:5px 8px;
-    scrollbar-width:none; /* Firefox */
+    padding:5px 5px;
+    scrollbar-width:none;
 }
 
 .botones-categorias::-webkit-scrollbar{
-    display:none; /* Chrome */
+    display:none;
 }
 
-/* 🔥 botones pequeños tipo filtro */
 .botones-categorias button{
     flex:0 0 auto;
     min-width:auto;
-    padding:6px 12px;
+    padding:6px 10px;
     font-size:0.8rem;
-    border-radius:18px;
+    border-radius:20px;
     white-space:nowrap;
     box-shadow:0 3px 8px rgba(0,0,0,0.08);
 }
 
-/* 🔥 iconos más pequeños */
-.botones-categorias i{
-    font-size:1rem;
+.categories h2{
+    font-size:2rem;
 }
-
+.productos{
+    margin-top:10px;
 }
 }
 
