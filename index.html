@@ -1,118 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella Muebles</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header -->
-      <header>
-       <div class="logo-titulo">
 
-        <img src="img/logo/logo.jpeg" alt="Bella Muebles" class="logo-header">
+    <!-- Header -->-
+    <header>
 
-        <div>
-            <h1>Bella Muebles</h1>
-            <div class="linea"></div>
+        <div class="logo-titulo">
+
+            <img src="img/logo/logo.jpeg" alt="Bella Muebles" class="logo-header">
+
+            <div>
+                <h1>Bella Muebles</h1>
+                <div class="linea"></div>
+            </div>
+
         </div>
 
-    </div>
-     </header>
- <!-- BANNER -->
+    </header>
+
+    <!-- BANNER -->
+
     <section class="banner">
 
-    <h2>Decoración y confort para tu hogar</h2>
+        <h2>Decoración y confort para tu hogar</h2>
 
-    <p>
-        Diseños modernos para transformar tus espacios.
-    </p>
+        <p>
+            Diseños modernos para transformar tus espacios.
+        </p>
 
     </section>
-<!-- CATEGORIAS -->
+
+    <!-- CATEGORIAS -->
+
     <section class="categories">
+
         <h2>Categorías</h2>
+
         <div class="botones-categorias">
-         <button>
-            <i class="fa-solid fa-couch"></i>
-            Sala
-        </button>
 
-        <button>
-            <i class="fa-solid fa-bed"></i>
-            Dormitorio
-        </button>
+            <button data-filtro="todos">
+                Todos
+            </button>
 
-        <button>
-            <i class="fa-solid fa-utensils"></i>
-            Comedor
-        </button>
+            <button data-filtro="sala">
+                <i class="fa-solid fa-couch"></i>
+                Sala
+            </button>
+
+            <button data-filtro="dormitorio">
+                <i class="fa-solid fa-bed"></i>
+                Dormitorio
+            </button>
+
+            <button data-filtro="comedor">
+                <i class="fa-solid fa-utensils"></i>
+                Comedor
+            </button>
+
         </div>
+
     </section>
+
     <!-- PRODUCTOS -->
-     <section class="productos">
-        <div class="card">
-        <img src="img/productos/img_mesa_madera.jpeg" alt ="">
-        <h3> Mesa de madera</h3>
-        <button class="ver-mas">Ver más</button>
-      <div class="info-producto">
 
-            <p><strong>Descripción:</strong> Mesa moderna en madera premium.</p>
+    <section class="productos">
 
-             <p><strong>Medidas:</strong> 1.80m x 90cm</p>
+        <div class="card" data-categoria="comedor">
 
-            <p><strong>Precio:</strong> $1.500.000</p>
+            <img src="img/productos/comedor_4_puestos.webp" loading="lazy" alt=" comedor_4_puestos">
 
-     
+            <h3>Comedor 4 puestos</h3>
+
+            <button class="ver-mas">Ver más</button>
+
+            <div class="info-producto">
+
+                <p><strong>Descripción:</strong>  Comedor de 4 puestos en flor 
+                 <br>  morado macizo tapa madera, pintado en pulioretano,tapizado
+                 <br> el espaldar  con tela anti fluido premium
+                </p>
+
+                
+
+                
+
+            </div>
 
         </div>
+
+        <div class="card" data-categoria="comedor">
+
+            <img src="img/productos/Comedor_6_puestos.webp" loading="lazy" alt="">
+
+            <h3>Comedor 6 puestos</h3>
+
+            <button class="ver-mas">Ver más</button>
+            <div class="info-producto">
+
+                <p><strong>Descripción:</strong>  Comedor de 6 puestos en flor 
+                 <br>  morado macizo, sillas en color natural base pintada en pulioretano,
+                 <br> sentadero tapizado con tela premium anti fluidos y amigable con mascotas
+                </p>
+
+                
+            </div>
+
         </div>
-        <div class="card">
-        <img src="img/productos/img_mesa_blanca.jpeg" alt ="">
-        <h3> Mesa blanca</h3>
-        <button class="ver-mas">Ver más</button>
+
+        <div class="card" data-categoria="Sala">
+
+            <img src="img/productos/sala_italia.webp" loading="lazy" alt="">
+
+            <h3>Sala italia </h3>
+
+            <button class="ver-mas">Ver más</button>
+            <div class="info-producto">
+
+                <p><strong>Descripción:</strong> Esta sala viene una poltrona una silla fija y una mecedora, 
+                    <br> sus brazos son en flor morado macizo y  tapizada con tela premium anti fluidos
+                    <br>y amigable con mascotas
+                  
+                 
+                </p>
+
+                
+            </div>
+            </div>
+            
+           <div  class ="card" data-categoria="Sala">
+            <img src="img/productos/sofa_y_dos_sillas.webp" loading="lazy" alt="">
+
+            <h3>Sala sofa y dos sillas </h3>
+
+            <button class="ver-mas">Ver más</button>
+            <div class="info-producto">
+
+                <p><strong>Descripción:</strong> Un sofá y dos sillas flor tapizadas con tela premium antifluidos 
+                    y amigable con las mascotas
+                  
+                 
+                </p>
+           </div> 
+
+
         </div>
-        <div class="card">
-        <img src="img/productos/img_mesa_6_puestos.jpeg" alt ="">
-        <h3> Mesa 6 puestos</h3>
-        <button class="ver-mas">Ver más</button>
+        <div  class ="card" data-categoria="Sala">
+            <img src="img/productos/sala_azul_clarito.webp" loading="lazy" alt="">
+
+            <h3>Sala azul clarito</h3>
+
+            <button class="ver-mas">Ver más</button>
+            <div class="info-producto">
+
+                <p><strong>Descripción:</strong> 
+                    Esta sala viene una poltrona una silla fija y una mecedora, sus brazos son en flor morado
+                     macizo y tapizada con tela premium anti fluidos y amigable con mascotas
+                  
+                 
+                </p>
+           </div> 
+           
+
         </div>
-        
-     </section>
+
+    </section>
+
+    <!-- UBICACION -->
+
     <section class="ubicacion">
-    <h2>Visítanos</h2>
 
-    <p>Estamos ubicados en Villavicencio, Meta.</p>
+        <h2>Visítanos</h2>
 
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.3775589905745!2d-73.63863622524886!3d4.145929446217567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2de3fe14fa3d%3A0xf01d1a750df912f8!2sBella%20Muebles!5e0!3m2!1ses-419!2sco!4v1778297243676!5m2!1ses-419!2sco"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+        <p>Estamos ubicados en Villavicencio, Meta.</p>
 
-</section>
-     <!-- FOOTER -->
-       <footer>
-    <p>Bella Muebles © 2026
-        📍 Villavicencio - Meta
-    📱 WhatsApp
-    📧 Correo
-    🕒 Horario
-    </p>
-        </footer>
-        <script src="script.js"></script>
-        <a href="https://wa.me/573222298440?text=Hola,%20quisiera%20más%20información%20sobre%20los%20muebles."class="whatsapp"target="_blank">💬
-</a>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.3775589905745!2d-73.63863622524886!3d4.145929446217567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2de3fe14fa3d%3A0xf01d1a750df912f8!2sBella%20Muebles!5e0!3m2!1ses-419!2sco!4v1778297243676!5m2!1ses-419!2sco"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Bella Muebles © 2026
+            📍 Villavicencio - Meta
+            📱 WhatsApp
+            📧 Correo
+            🕒 Horario
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/573222298440?text=Hola,%20quisiera%20más%20información%20sobre%20los%20muebles."
+        class="whatsapp" target="_blank">
+        💬
+    </a>
+
+
 
 </body>
+
 </html>
