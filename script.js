@@ -1,32 +1,22 @@
-const botonesVerMas = document.querySelectorAll(".ver-mas");
+document.addEventListener("click", (e) => {
 
-botonesVerMas.forEach(boton => {
+    const btn = e.target.closest(".ver-mas");
+    if(!btn) return;
 
-    boton.addEventListener("click", () => {
+    const card = btn.closest(".card");
+    if(!card) return;
 
-        // buscar SOLO dentro de esta card
-        const card = boton.parentElement;
+    // toggle solo de esta card
+    card.classList.toggle("active");
 
-        const info = card.querySelector(".info-producto");
-
-        // toggle
-        if(info.style.display === "block"){
-
-            info.style.display = "none";
-            boton.textContent = "Ver más";
-
-        }else{
-
-            info.style.display = "block";
-            boton.textContent = "Ver menos";
-
-        }
-
-    });
+    // cambiar texto
+    if(card.classList.contains("active")){
+        btn.textContent = "Ver menos";
+    }else{
+        btn.textContent = "Ver más";
+    }
 
 });
-
-
 
 /* ===== FILTRO CATEGORIAS ===== */
 
