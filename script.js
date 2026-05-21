@@ -20,6 +20,8 @@ document.addEventListener("click", (e) => {
 
 /* ===== FILTRO CATEGORIAS ===== */
 
+/* ===== FILTRO CATEGORIAS ===== */
+
 const botones = document.querySelectorAll(".botones-categorias button");
 
 const productos = document.querySelectorAll(".card");
@@ -38,6 +40,13 @@ botones.forEach(boton => {
             ){
 
                 producto.style.display = "block";
+
+                // reiniciar animación
+                producto.style.animation = "none";
+
+                producto.offsetHeight; // fuerza reflow
+
+                producto.style.animation = "aparecer 0.6s ease";
 
             }else{
 
