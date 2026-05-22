@@ -18,7 +18,6 @@ document.addEventListener("click", (e) => {
 
 });
 
-/* ===== FILTRO CATEGORIAS ===== */
 
 /* ===== FILTRO CATEGORIAS ===== */
 

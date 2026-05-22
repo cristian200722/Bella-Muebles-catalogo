@@ -405,82 +405,63 @@ section{
 }
 
 /* ===== RESPONSIVE ===== */
-
 @media(max-width:768px){
 
-header h1{
-    font-size:2.5rem;
+    header h1{
+        font-size:2.5rem;
+    }
+
+    .banner{
+        padding:15px 10px;
+    }
+
+    .banner h2{
+        font-size:1.8rem;
+    }
+
+    .banner p{
+        font-size:1rem;
+    }
+
+    .productos{
+        padding:15px;
+        grid-template-columns:1fr;
+        margin-top:10px;
+    }
+
+    .card img{
+        height:250px;
+    }
+
+    .card h3{
+        font-size:1rem;
+    }
+
+    /* CATEGORÍAS MOBILE */
+    .botones-categorias{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+
+        gap:8px;
+        padding:8px 10px;
+    }
+
+    .botones-categorias button{
+        padding:7px 12px;
+        font-size:0.75rem;
+
+        border-radius:20px;
+        white-space:nowrap;
+    }
+
+    .categories h2{
+        font-size:2rem;
+        margin-bottom:10px;
+    }
+
 }
-
-.banner{
-    padding:15px 10px;
-}
-
-.banner h2{
-    font-size:1.8rem;
-}
-
-.banner p{
-    font-size:1rem;
-}
-
-.productos{
-    padding:15px;
-    grid-template-columns:1fr;
-}
-
-
-.card img{
-    height:250px;
-}
-
-.card h3{
-    font-size:1rem;
-}
-.categories{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:var(--blanco);
-    padding:8px 5px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-/*  FIX CATEGORÍAS MOBILE */
-.botones-categorias{
-    display:flex;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    justify-content:flex-start;
-
-    gap:4px;
-    padding:3px 10px;
-
-    scroll-snap-type:x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* centra cada botón como “snap” */
-.botones-categorias button{
-    flex:0 0 auto;
-    scroll-snap-align:center;
-
-    min-width:auto;
-    padding:3px 8px;
-    font-size:0.65rem;
-    border-radius:12px;
-
-    white-space:nowrap;
-}
-
-.categories h2{
-    font-size:2rem;
-}
-.productos{
-    margin-top:10px;
-}
-}
-
 /* ===== BOTÓN WHATSAPP ===== */
 
 button,
