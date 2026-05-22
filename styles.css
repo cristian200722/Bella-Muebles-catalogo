@@ -78,7 +78,7 @@ header h1:hover{
         var(--turquesa)
     );
     color:var(--blanco);
-    padding:15px 25px 20px;
+  padding:10px 25px 15px;
     text-align:center;
 }
 
@@ -119,43 +119,100 @@ section{
 /* ===== CATEGORÍAS ===== */
 
 .categories{
-    padding:25px 20px 0;
+    padding: 0px 20px 0;
     text-align:center;
+      margin-top:-10px;
 }
-
 .categories h2{
     font-family:'Playfair Display', serif;
     font-size:2rem;
     font-weight:600;
     color:var(--azul);
+
     position:relative;
-    display:inline-block;
+
+    display:block;
+
+    width:fit-content;
+
+    margin:auto;
+
     margin-bottom:25px;
 }
 
 .categories h2::after{
     content:"";
-    width:90%;
+
+    width:100%;
     height:3px;
+
     background:linear-gradient(
         to right,
         transparent,
         var(--naranja),
         transparent
     );
+
     position:absolute;
-    left:50%;
-    bottom:-10px;
-    transform:translateX(-50%);
+
+    left:0;
+    bottom:-6px;
+
     border-radius:10px;
 }
+/* ===== BOTÓN DESPLEGAR CATEGORÍAS ===== */
+
+.toggle-categorias{
+    background:var(--azul);
+    color:var(--blanco);
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin:0 auto 20px;
+
+    transition:0.3s ease;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.toggle-categorias:hover{
+    background:var(--turquesa);
+    transform:translateY(-3px);
+}
+
+.toggle-categorias i{
+    transition:0.3s ease;
+}
+
+/* ===== CATEGORÍAS OCULTAS ===== */
 
 .botones-categorias{
+    display:none;
+}
+
+/* ===== CUANDO SE ABREN ===== */
+
+.botones-categorias.activo{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:12px;
 }
+
 
 .botones-categorias button{
     background:var(--blanco);
@@ -406,6 +463,7 @@ section{
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
+    
 
     header h1{
         font-size:2.5rem;
@@ -438,24 +496,42 @@ section{
     }
 
     /* CATEGORÍAS MOBILE */
-    .botones-categorias{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        align-items:center;
+   /* CATEGORÍAS MOBILE */
+.categories{
+      padding-top:0;
+    margin-top:-25px;
+}
+.botones-categorias.activo{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
 
-        gap:8px;
-        padding:8px 10px;
-    }
+    gap:8px;
 
-    .botones-categorias button{
-        padding:7px 12px;
-        font-size:0.75rem;
+    margin-top:10px;
+}
 
-        border-radius:20px;
-        white-space:nowrap;
-    }
+.botones-categorias button{
+    width:100%;
 
+    padding:10px 8px;
+
+    font-size:0.72rem;
+
+    border-radius:16px;
+
+    white-space:nowrap;
+}
+.botones-categorias button:last-child{
+    grid-column:1 / -1;
+    justify-self:center;
+    width:70%;
+}
+
+.toggle-categorias{
+    width:100%;
+    max-width:260px;
+    font-size:0.9rem;
+}
     .categories h2{
         font-size:2rem;
         margin-bottom:10px;

@@ -58,3 +58,15 @@ botones.forEach(boton => {
     });
 
 });
+const toggleCategorias = document.querySelector('.toggle-categorias');
+const categorias = document.querySelector('.botones-categorias');
+const iconoCategorias = document.querySelector('.toggle-categorias i');
+
+toggleCategorias.addEventListener('click', () => {
+
+    categorias.classList.toggle('activo');
+
+    iconoCategorias.classList.toggle('fa-chevron-down');
+    iconoCategorias.classList.toggle('fa-chevron-up');
+
+});
