@@ -289,7 +289,7 @@ section{
 
 .card img{
     width:100%;
-    height:250px;
+    height:350px;
     object-fit:cover;
     display:block;
     margin:auto;
@@ -591,4 +591,95 @@ a{
 .copy{
     font-size:0.9rem;
     opacity:0.8;
+}
+/* ===== MODAL IMAGEN ===== */
+
+.modal-imagen{
+    display:none;
+
+    position:fixed;
+
+    z-index:2000;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.9);
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.modal-imagen.activo{
+    display:flex;
+}
+
+.imagen-grande{
+    max-width:90%;
+    max-height:90%;
+
+    border-radius:15px;
+
+    object-fit:contain;
+
+    animation:zoom .3s ease;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.cerrar-modal{
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    font-size:3rem;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.cerrar-modal:hover{
+    transform:scale(1.1);
+}
+/* ===== ZOOM IMAGEN ===== */
+
+.card img{
+    cursor:pointer;
+}
+
+.zoom-texto{
+    display:block;
+
+    font-size:0.8rem;
+
+    color:#777;
+
+    margin-top:8px;
+
+    opacity:.8;
+}
+
+/* EFECTO HOVER */
+
+.card:hover img{
+    transform:scale(1.03);
 }

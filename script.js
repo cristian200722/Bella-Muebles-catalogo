@@ -70,3 +70,34 @@ toggleCategorias.addEventListener('click', () => {
     iconoCategorias.classList.toggle('fa-chevron-up');
 
 });
+const modal = document.getElementById('modalImagen');
+const imagenGrande = document.getElementById('imagenGrande');
+const cerrarModal = document.querySelector('.cerrar-modal');
+
+const imagenes = document.querySelectorAll('.card img');
+
+imagenes.forEach(img => {
+
+    img.addEventListener('click', () => {
+
+        modal.classList.add('activo');
+
+        imagenGrande.src = img.src;
+
+    });
+
+});
+
+cerrarModal.addEventListener('click', () => {
+
+    modal.classList.remove('activo');
+
+});
+
+modal.addEventListener('click', (e) => {
+
+    if(e.target === modal){
+        modal.classList.remove('activo');
+    }
+
+});
