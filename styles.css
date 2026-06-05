@@ -521,11 +521,7 @@ section{
 
     white-space:nowrap;
 }
-.botones-categorias button:last-child{
-    grid-column:1 / -1;
-    justify-self:center;
-    width:70%;
-}
+
 
 .toggle-categorias{
     width:100%;
