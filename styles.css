@@ -6,7 +6,9 @@
     --blanco:#FFFFFF;
     --gris:#F4F4F4;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 /* ===== RESET ===== */
 
 *{
@@ -98,7 +100,37 @@ header h1:hover{
     from{opacity:0; transform:translateY(15px);}
     to{opacity:1; transform:translateY(0);}
 }
+.banner-ubicacion{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
 
+    margin-top:20px;
+
+    padding:10px 18px;
+
+    background:rgba(255,255,255,0.15);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:500;
+
+    transition:.3s ease;
+   box-shadow: 0 4px 20px rgba(18,168,160,0.25);
+}
+
+.banner-ubicacion:hover{
+    background:rgba(255,255,255,0.25);
+    transform:translateY(-2px);
+}
+
+.banner-ubicacion i{
+    color:var(--naranja);
+}
 .banner h2{
     font-family:'Playfair Display', serif;
     font-size:2.4rem;
