@@ -37,11 +37,17 @@ body{
 /* ===== HEADER ===== */
 
 header{
-   background:var(--azul);
-    color:var(--blanco);
-    padding:10px;
-    text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:transparent;
+
+    box-shadow:none;
+
+    z-index:1000;
 }
 
 header h1{
@@ -74,26 +80,55 @@ header h1:hover{
 /* ===== BANNER ===== */
 
 .banner{
+    position: relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("img/productos/sala_piano.webp");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    min-height: 600px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+   padding:40px 25px 80px;
+    text-align:center;
+    color:white;
+
+    overflow:hidden;
+}
+.banner::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:180px;
+
     background:linear-gradient(
         to bottom,
-        var(--azul),
-        var(--turquesa)
+        transparent,
+        #f8f9fa
     );
-    color:var(--blanco);
-  padding:10px 25px 15px;
-    text-align:center;
+
+    pointer-events:none;
 }
 
 .banner p{
-    font-size:1.3rem;
-    font-weight:300;
-    letter-spacing:1px;
-    max-width:700px;
-    margin:15px auto 0;
-    line-height:1.8;
-    color:rgba(255,255,255,0.95);
-    text-shadow:0 2px 10px rgba(0,0,0,0.15);
-    animation:fadeIn 1.2s ease;
+    font-size:1.4rem;
+    
+    text-shadow:0 4px 15px rgba(0,0,0,.7);
 }
 
 @keyframes fadeIn{
@@ -132,13 +167,8 @@ header h1:hover{
     color:var(--naranja);
 }
 .banner h2{
-    font-family:'Playfair Display', serif;
-    font-size:2.4rem;
-    font-weight:600;
-    letter-spacing:1px;
-    line-height:1.3;
-    text-shadow:0 3px 10px rgba(0,0,0,0.2);
-    animation:fadeIn 0.8s ease;
+    font-size:3rem;
+    text-shadow:0 4px 15px rgba(0,0,0,.7);
 }
 
 
@@ -502,17 +532,24 @@ section{
     }
 
     .banner{
-        padding:15px 10px;
+        min-height:450px;
+
+    padding:120px 20px 80px;
+
+     background-position: 40% center;
     }
 
     .banner h2{
-        font-size:1.8rem;
+     font-size:2.2rem;
+    line-height:1.2;
     }
 
     .banner p{
-        font-size:1rem;
+         font-size:1rem;
     }
-
+    .banner::after{
+    height:100px;
+}
     .productos{
         padding:15px;
         grid-template-columns:1fr;
